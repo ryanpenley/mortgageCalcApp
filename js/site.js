@@ -64,7 +64,7 @@ document.getElementById("principal").textContent = principalElementValue;
 
 document.getElementById("totalInterestDisplay").textContent = totalInterestElementValue;
 
-document.getElementById("totalCostDislay").textContent = (principalElementValue + totalInterestElementValue).toLocaleString();
+document.getElementById("totalCostDisplay").textContent = (principalElementValue + totalInterestElementValue).toLocaleString();
 
 
 //   table results
