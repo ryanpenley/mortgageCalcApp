@@ -58,13 +58,13 @@ let principalElementValue = document.getElementById("loanAmount").value;
 let totalInterestElementValue = loanData[loanData.length - 1].totalInterest;
 
 
-document.getElementById("MonthlyPaymentAmountDisplay").textContent = loanData[0].payment.toLocaleString();
+document.getElementById("MonthlyPaymentAmountDisplay").textContent = loanData[0].payment.toLocaleString('en-US', {style:'currency',currency:'USD'});
 
-document.getElementById("principal").textContent = principalElementValue;
+document.getElementById("principal").textContent = principalElementValue.toLocaleString('en-US', {style:'currency',currency:'USD'});
 
-document.getElementById("totalInterestDisplay").textContent = totalInterestElementValue;
+document.getElementById("totalInterestDisplay").textContent = totalInterestElementValue.toLocaleString('en-US', {style:'currency',currency:'USD'});
 
-document.getElementById("totalCostDisplay").textContent = (principalElementValue + totalInterestElementValue).toLocaleString();
+document.getElementById("totalCostDisplay").textContent = (principalElementValue + totalInterestElementValue).toLocaleString('en-US', {style:'currency',currency:'USD'});
 
 
 //   table results
