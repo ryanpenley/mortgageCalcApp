@@ -58,7 +58,7 @@ let principalElementValue = document.getElementById("loanAmount").value;
 let totalInterestElementValue = loanData[loanData.length - 1].totalInterest;
 
 
-document.getElementById("MonthlyPaymentAmountDisplay").textContent = loanData[0].payment;
+document.getElementById("MonthlyPaymentAmountDisplay").textContent = loanData[0].payment.toLocaleString();
 
 document.getElementById("principal").textContent = principalElementValue;
 
