@@ -116,25 +116,5 @@ function displayResults(loanPayments) {
       currency: 'USD'
     });
   }
-
-
-
-
-
-
-  // //   table results
-  //   document.getElementById("monthDisplay").innerHTML = "" + month;
-
-  //   document.getElementById("monthlyPaymentDisplay").innerHTML = "$";
-
-  //   document.getElementById("paymentAmountDisplay").innerHTML = "$";
-
-  //   document.getElementById("totalInterest").innerHTML = "%";
-
-  //   document.getElementById("totalPayment").innerHTML = "$";
-
-
-
-
 }
 
