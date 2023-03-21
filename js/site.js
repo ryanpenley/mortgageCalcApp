@@ -7,8 +7,6 @@ function getValues() {
   let interestRate = parseFloat(document.getElementById('interestRate').value);
 
   loanCalculation(loanAmount, termLength, interestRate);
-
-  // displayResults(mathStuff);
 }
 
 // logic function

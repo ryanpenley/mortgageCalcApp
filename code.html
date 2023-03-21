@@ -84,8 +84,6 @@
                               let interestRate = parseFloat(document.getElementById('interestRate').value);
                             
                               loanCalculation(loanAmount, termLength, interestRate);
-                            
-                              // displayResults(mathStuff);
                             }
                             
                             // logic function
@@ -93,8 +91,6 @@
                               let loanInput = loanAmount;
                               let termLength = termInput;
                               let interestRate = interestInput;
-                            
-                            
                             
                             
                               let totalMonthlyPayment = (loanInput * (interestRate / 1200)) / (1 - (1 + interestRate / 1200) ** -termLength);
@@ -171,10 +167,6 @@
                                 tableBody.appendChild(eventRow);
                               }
                             
-                              // let totalInterest = loanPayments[loanPayments.length - 1].totalInterest;
-                              // let totalCost = totalInterest + principal;
-                              // let monthlyPayment = loanPayments[0].monthlyPayment
-                            
                               document.getElementById("MonthlyPaymentAmountDisplay").textContent = formatCurrency(loanPayments[0].payment);
                             
                               document.getElementById("principal").textContent = formatCurrency(principalElementValue);
@@ -182,8 +174,6 @@
                               document.getElementById("totalInterestDisplay").textContent = formatCurrency(totalInterestElementValue);
                             
                               document.getElementById("totalCostDisplay").textContent = formatCurrency(totalCostValue);
-                            
-                            
                             
                             
                             
@@ -199,13 +189,37 @@
                 </div>
                 <!-- Code Description -->
                 <div class="col-12 col-lg-4">
-                    <p>The code is structured in one function</p>
-                    <h5><code>displayMessage()</code></h5>
-                    <p>This function displays the message in a Sweet Alert.</p>
+                    <p>The code is structured in four functions:</p>
+                    <h5><code>getValues()</code></h5>
+                    <p>
+                        This function gets the input values that the user has put into the HTML via the webpage.
+                        It then assigns those values to variables and converts those values to string using the
+                        parseFloat function and one of the values gets converted to an int using the parseInt function.
+                        Lastly, it passes those values to the loanCalculation function as parameters.
+                    </p>
+                    <h5><code>loanCalculation()</code></h5>
+                    <p>
+                        This function receives the values from the getValues function as parameters.
+                        It then performs the necessary calculations and uses a for loop to loop through
+                        each payment to generate the payment needed for each month and pushes that data
+                        to the monthlyPayments variable to be passed to the displayResults function.
+                    </p>
+                    <h5><code>displayResults()</code></h5>
+                    <p>
+                        This function receives the monthlyPayments variable from the loanCalculation function
+                        as a parameter. It then performs the necessary methods to show the results for the top
+                        card that displays the principal, total interest, and total cost of the loan. Next, it
+                        directs the data to the correct place in the HTML using the getElementById function.
+                        Then it loops through all the months of the loan to display the amortization table properly.
+                    </p>
+                    <h5><code>formatCurrency()</code></h5>
+                    <p>
+                        This small function formats the currency to use the US dollar.
+                    </p>
                 </div>
             </div>
         </main>
-        
+
         <footer class="container-fluid py-3">
             <div class="container">
                 <div class="row row-cols-1 row-cols-lg-3 align-items-center">
@@ -216,9 +230,12 @@
                         <img src="/img/RPWhite logo - no background.svg" height="60">
                     </div>
                     <div class="col text-center text-lg-center">
-                        <a href="https://www.linkedin.com/in/ryan-penley-459892102/" target="_blank" class="socialicons"><i class="bi bi-linkedin"></i></a>
-                        <a href="https://twitter.com/ryanpenleydev" target="_blank" class="socialicons"><i class="bi bi-twitter"></i></a>
-                        <a href="https://github.com/ryanpenley?tab=repositories" target="_blank" class="socialicons"><i class="bi bi-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ryan-penley-459892102/" target="_blank"
+                            class="socialicons"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://twitter.com/ryanpenleydev" target="_blank" class="socialicons"><i
+                                class="bi bi-twitter"></i></a>
+                        <a href="https://github.com/ryanpenley?tab=repositories" target="_blank" class="socialicons"><i
+                                class="bi bi-github"></i></a>
                     </div>
                 </div>
             </div>
