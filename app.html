@@ -71,17 +71,17 @@
                     <form action="#" class="row gy-2 gx-2">
                         <div class="col-12">
                             <p>Loan Amount</p>
-                            <input id="loanAmount" type="number" class="form-control" placeholder="Loan Amount"
+                            <input id="loanAmount" type="number" min="0" oninput="validity.valid||(value='');" class="form-control" placeholder="Loan Amount"
                                 aria-label="Loan Amount" />
                         </div>
                         <div class="col-12">
                             <p>Term (Months)</p>
-                            <input id="termAmount" type="number" class="form-control" placeholder="Term"
+                            <input id="termAmount" type="number" min="0" oninput="validity.valid||(value='');" class="form-control" placeholder="Term"
                                 aria-label="Term" />
                         </div>
                         <div class="col-12">
                             <p>Interest Rate</p>
-                            <input id="interestRate" type="number" class="form-control" placeholder="Interest Rate"
+                            <input id="interestRate" type="number" min="0" oninput="validity.valid||(value='');" class="form-control" placeholder="Interest Rate"
                                 aria-label="Interest Rate" />
                         </div>
                         <div class="col-12 text-end">
